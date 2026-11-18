@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>mirror-cert-lab — certified mirror symmetry for triangle meshes</title>
+<style>
+  body { margin: 0; font: 14px/1.45 ui-monospace, monospace; background: #0e1116; color: #d7dde6; }
+  #app { display: grid; grid-template-columns: 320px 1fr; height: 100vh; }
+  aside { padding: 16px; overflow: auto; border-right: 1px solid #253041; }
+  h1 { font-size: 15px; margin: 0 0 8px; color: #7ee0c0; }
+  select, button { width: 100%; margin: 4px 0; padding: 6px; background: #18202b; color: #d7dde6; border: 1px solid #31405a; }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; margin-top: 8px; }
+  td, th { text-align: left; padding: 2px 4px; border-bottom: 1px solid #1e2836; }
+  .ok { color: #6ee7a8; } .no { color: #f08a8a; }
+  #hint { color: #8a98ab; font-size: 12px; margin-top: 10px; }
+  canvas { display: block; }
+</style>
+<script type="importmap">
+{ "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/" } }
+</script>
+</head>
+<body>
+<div id="app">
+  <aside>
+    <h1>mirror-cert-lab</h1>
+    <div>Mirror-symmetry certificate: every accepted plane is backed by a two-sided vertex match plus a triangulation-invariant surface-distance check. Numbers below are recomputed in your browser by the same <code>src/core.mjs</code> that node uses.</div>
+    <select id="asset"></select>
+    <table id="planes"><thead><tr><th>plane n</th><th>d</th><th>maxDev</th></tr></thead><tbody></tbody></table>
+    <div id="summary"></div>
+    <div id="hint">Drag to orbit · wheel to zoom · "witness" marks the worst-deviation sample.</div>
+  </aside>
+  <main id="view"></main>
+</div>
+<script type="module" src="./main.js"></script>
+</body>
+</html>

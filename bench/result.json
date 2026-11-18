@@ -1,0 +1,56 @@
+{
+  "generatedAt": "2026-11-18T14:24:16.849Z",
+  "node": "v24.19.0",
+  "coldStartMs": 30.011,
+  "samplesMs": [
+    14.969,
+    11.377,
+    10.608,
+    10.858,
+    11.485,
+    10.914,
+    11.15
+  ],
+  "medianMs": 11.15,
+  "p95Ms": 14.969,
+  "minMs": 10.608,
+  "stddevMs": 1.395,
+  "rsdPct": 12,
+  "baseline": {
+    "points": 6000,
+    "naiveMedianMs": 83.895,
+    "gridMedianMs": 55.093,
+    "speedup": 1.52
+  },
+  "countercheck": {
+    "matched": 6000,
+    "maxDev": 0
+  },
+  "assetCounts": [
+    {
+      "name": "box-3planes",
+      "accepted": 3
+    },
+    {
+      "name": "bracket-mirror",
+      "accepted": 2
+    },
+    {
+      "name": "tilted-box",
+      "accepted": 3
+    },
+    {
+      "name": "decoy-perturb",
+      "accepted": 0
+    },
+    {
+      "name": "decoy-shear",
+      "accepted": 0
+    },
+    {
+      "name": "retriangulated-box",
+      "accepted": 3
+    }
+  ],
+  "fingerprint": "2cea5cd133300d5156066728f6abf626ee23121e1728d84cfc095bbdfd44e591"
+}
