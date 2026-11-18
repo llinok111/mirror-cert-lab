@@ -27,7 +27,7 @@ Only the browser viewer needs a network; `src/core.mjs` is dependency-free and r
 | matching speed | **55.1 ms** grid vs **83.9 ms** naive (1.52×, 6,000 points) | `baseline/naive.mjs`, same `tol` contract |
 | full 6-asset certificate | cold 30.0 ms; 7 samples median **11.15 ms**, p95 14.97, RSD 12.0% | — |
 
-`bench/result.json` is the machine-readable source of every number above. The 12.0% RSD is JIT warm-up plus GC on 6 small meshes (the timed unit is ~11 ms); cold start is reported separately (30.0 ms).
+`bench/result.json` is the machine-readable source of every number above. The 12.0% RSD is JIT warm-up plus GC on 6 small meshes (the timed unit is ~11 ms); cold start is reported separately (30.0 ms). A clean-clone rerun of the same commit measured median **11.85 ms**, cold **41.8 ms**, speedup **1.85×** — all within the disclosed run-to-run spread, and the committed `bench/result.json` is the run quoted in the table.
 
 ## How the certificate works
 
